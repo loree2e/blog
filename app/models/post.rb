@@ -4,9 +4,11 @@ class Post < ActiveRecord::Base
   belongs_to :author
   belongs_to :image
 
+  has_many :comments
 
-	def hello
+
+  def hello
   	"Hello #{self.name}. Thank you for this post."
-	end
+  end
 end
 

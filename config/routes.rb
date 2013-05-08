@@ -1,4 +1,8 @@
 Blog::Application.routes.draw do
+  get "comment/index"
+
+  get "image/index"
+
   resources :authors
 
 
