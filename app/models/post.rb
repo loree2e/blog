@@ -1,11 +1,11 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :name, :title
+  attr_accessible :content, :name, :title, :comments_attributes
 
   belongs_to :author
   belongs_to :image
 
   has_many :comments
-  accepts_nested_attributes_for :comments, reject_if: lambda { |c| c[:body].blank? }
+  accepts_nested_attributes_for :comments
 
 
   def hello
