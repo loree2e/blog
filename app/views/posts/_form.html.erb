@@ -11,6 +11,17 @@
     </div>
   <% end %>
 
+  
+  <%= label_tag(:male, "Male") %>
+  <%= check_box_tag(:male) %>
+  <%= label_tag(:female, "Female") %>
+  <%= check_box_tag(:female) %>
+
+  <%= options_for_select([['Artist', 1], ['Patron', 2]]) %>
+
+  <%= select_date Date.today, :prefix => :start_date %>
+  
+
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
