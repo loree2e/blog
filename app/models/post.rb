@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   belongs_to :image
 
   has_many :comments
+  accepts_nested_attributes_for :comments, reject_if: lambda { |c| c[:body].blank? }
 
 
   def hello

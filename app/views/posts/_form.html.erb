@@ -26,4 +26,8 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  <%= f.fields_for :comments do |comment| %>
+    <%= comment.label :body, "Comment" %>
+    <%= comment.text_area :body %>
+  <% end %>
 <% end %>
