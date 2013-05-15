@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 40 }
   validates :title, presence: true, length: { maximum: 40 }
 
-  scope :order_by_author, lambda{ joins(:author).order( 'authors.name') }
+  scope :order_by_author, lambda{ joins(:author).order( 'authors.name ASC') }
 
   def hello
   	"Hello #{self.name}. Thank you for this post."
