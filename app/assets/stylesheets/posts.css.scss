@@ -10,3 +10,13 @@ input.checkbox {
     height: 25px;
     
 }
+
+table{
+    table-layout: fixed;
+    width: 200px;
+}
+
+th, td {
+    overflow: hidden;
+    width: 200px;
+}

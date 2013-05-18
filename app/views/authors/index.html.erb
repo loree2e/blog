@@ -1,5 +1,11 @@
 <h1>Listing authors</h1>
 
+<% if author_signed_in? %>
+  <h1>You're signed in!</h1>
+<% else %>
+  <h1>You're not signed in :(</h1>
+<% end %>
+
 <%= render 'author_greeting' %>
 <table>
   <tr>

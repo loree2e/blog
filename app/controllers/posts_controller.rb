@@ -1,6 +1,12 @@
 class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
+  before_filter :set_rand_num
+
+  def set_rand_num
+    @rand_num = rand 0..100
+  end
+
   def index
     @posts = Post.order_by_author
 

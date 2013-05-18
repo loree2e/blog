@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_filter :authenticate_author!, except: :index
   # GET /posts
   # GET /posts.json
   def index

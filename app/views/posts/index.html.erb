@@ -1,13 +1,13 @@
 <div class="hero-unit">
   <h1>A Blog App</h1>
-  <p>A project for Bloc.io</p>
+  <p>A Rails project for Bloc.io</p>
   <p>
-    <a class="btn btn-primary btn-large">
-      Create a post
-    </a>
+  <%= link_to 'Create a post', new_post_path, class: "btn btn-primary btn-large"%> 
   </p>
 </div>
 
+
+<h3>Previous Posts</h3>
 <table>
   <tr>
     <th>Name</th>
