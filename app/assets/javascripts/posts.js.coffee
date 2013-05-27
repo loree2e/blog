@@ -9,8 +9,6 @@ $( document ).ready(function() {
 ###
 
 $( document ).ready () ->
-	$( '.show_body').click () -> 
-		$.get '/posts', (;) ->
-			$(this).append data.body
-
-	$(this).hide()
+	$( '.show-body').click () -> 
+		$.get '/posts.json', (data) ->
+			$('.show-body').append data.body
