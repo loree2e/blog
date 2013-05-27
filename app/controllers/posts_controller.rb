@@ -1,18 +1,21 @@
 class PostsController < ApplicationController
-  # GET /posts
-  # GET /posts.json
+  
   before_filter :set_rand_num
 
   def set_rand_num
     @rand_num = rand 0..100
   end
 
+  # GET /posts
+  # GET /posts.json
   def index
     @posts = Post.order_by_author
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @posts }
+      hash = { body: "hello world!"}
+      format.json { render json: hash }
+      #format.json { render json: @posts }
     end
   end
 
